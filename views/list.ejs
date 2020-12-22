@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <% importList.products.forEach(function(n) { %>
-        <li><%= n.name %></li>
+    <% names.forEach(function(people) { %>
+        <li><a href="/list/<%= people.id %>"><%= people.name %></a></li>
         <% }) %>
 </body>
 </html>
