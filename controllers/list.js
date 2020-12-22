@@ -11,8 +11,7 @@ function item(req, res, next) {
   const {
     params: { id: itemId },
   } = req;
-
-  res.render("single-item", { names: importList.products, id: itemId });
+  res.render("single-name", { names: importList.products, id: itemId });
 
   // const {id} = params
   // params = '5' // immutable
@@ -20,7 +19,16 @@ function item(req, res, next) {
   // console.log(req);
 }
 
+function post(req,res,next) {
+  
+  let add = {name: req.body.value, id: importList.products[0].id+=5}
+  importList.products.push(add)
+  console.log(importList.products)
+  res.render("list.ejs", { names: importList.products});
+}
+
 module.exports = {
   index,
   item,
+  post,
 };

@@ -8,7 +8,7 @@
 <body>
     <% names.forEach(function(people) { %>
         <% if (id == people.id) { %>
-            <h1> <%= people.name %> is at this URL</h1>
+            <h1> <%= people.name %> is at this URL with the id of <%= people.id %></h1>
         <% } %>
     <% }) %>
 </body>

@@ -9,5 +9,11 @@
     <% names.forEach(function(people) { %>
         <li><a href="/list/<%= people.id %>"><%= people.name %></a></li>
         <% }) %>
+        <br>
+        Add to names
+        <form action="/list" method="post">
+            <input type="text" name="value">
+            <button type="submit">Submit</button>
+        </form>
 </body>
 </html>
