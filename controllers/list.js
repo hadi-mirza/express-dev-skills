@@ -22,12 +22,17 @@ function item(req, res, next) {
 function post(req,res,next) {
   let add = {name: req.body.value, id: importList.products[0].id*Math.floor(Math.random() * 1000) + 10}
   importList.products.push(add)
-  console.log(importList.products)
   res.render("list.ejs", { names: importList.products});
 }
+
+// function update(req,res,next) {
+//   let updatedName = req.body.newValue
+//   console.log(updatedName)
+// }
 
 module.exports = {
   index,
   item,
   post,
+  // update,
 };

@@ -6,5 +6,6 @@ let listCtrl = require('../controllers/list.js')
 router.get('/', listCtrl.index);
 router.get('/:id', listCtrl.item);
 router.post('/', listCtrl.post)
+// router.post('/', listCtrl.update)
 
 module.exports = router;
