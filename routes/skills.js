@@ -4,8 +4,9 @@ let skillCtrl = require('../controllers/skills.js')
 
 /* GET users listing. */
 router.get('/', skillCtrl.index);
-router.get('/:id', skillCtrl.item);
+router.get('/new', skillCtrl.addNew)
 router.post('/', skillCtrl.create)
-// router.post('/', listCtrl.update)
+
+router.get('/:id', skillCtrl.show);
 
 module.exports = router;
