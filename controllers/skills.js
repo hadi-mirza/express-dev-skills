@@ -1,17 +1,17 @@
-const importList = require("../models/list.js");
+const importList = require("../models/skill.js");
 
 function index(req, res, next) {
   const {
     params: { id: itemId },
   } = req;
-  res.render("list.ejs", { names: importList.products, id: itemId });
+  res.render("skills.ejs", { skillNames: importList.skills, id: itemId });
 }
 
 function item(req, res, next) {
   const {
     params: { id: itemId },
   } = req;
-  res.render("single-name", { names: importList.products, id: itemId });
+  res.render("single-skill", { skillNames: importList.skills, id: itemId });
 
   // const {id} = params
   // params = '5' // immutable
@@ -19,10 +19,10 @@ function item(req, res, next) {
   // console.log(req);
 }
 
-function post(req,res,next) {
-  let add = {name: req.body.value, id: importList.products[0].id*Math.floor(Math.random() * 1000) + 10}
-  importList.products.push(add)
-  res.render("list.ejs", { names: importList.products});
+function create(req,res,next) {
+  let add = {name: req.body.value, id: importList.skills[0].id*Math.floor(Math.random() * 1000) + 10}
+  importList.skills.push(add)
+  res.render("skills.ejs", { skillNames: importList.skills});
 }
 
 // function update(req,res,next) {
@@ -33,6 +33,6 @@ function post(req,res,next) {
 module.exports = {
   index,
   item,
-  post,
+  create,
   // update,
 };

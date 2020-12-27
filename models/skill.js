@@ -1,4 +1,4 @@
-let products = [
+let skills = [
   { name: "hadi", id: "1" },
   { name: "jay", id: "2" },
   { name: "sam", id: "3" },
@@ -13,6 +13,6 @@ function getEach() {
 }
 
 module.exports = {
-  products,
+  skills,
   getEach,
 };
