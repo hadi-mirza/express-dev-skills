@@ -14,8 +14,9 @@ function getEach() {
 
 function deleteOne(id) {
   // Find the index based on the id of the object
-  const idx = skills.findIndex(skills => skills.id === parseInt(id));
-  skills.splice(idx, 1);
+
+const idx = skills.findIndex(skills => skills.id == id);
+skills.splice(idx, 1)
 }
 
 module.exports = {

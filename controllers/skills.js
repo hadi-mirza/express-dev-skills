@@ -29,7 +29,6 @@ function create(req,res,next) {
 function deleteSkill(req,res,next) {
   importList.deleteOne(req.params.id);
   res.redirect('/skills');
-  console.log('test2')
 }
 
 module.exports = {
