@@ -6,8 +6,6 @@ let skillCtrl = require('../controllers/skills.js')
 router.get('/', skillCtrl.index);
 router.get('/new', skillCtrl.addNew)
 router.post('/', skillCtrl.create)
-
-// Not sure if this is the right mount
 router.delete('/:id', skillCtrl.delete)
 router.put('/:id', skillCtrl.update)
 
