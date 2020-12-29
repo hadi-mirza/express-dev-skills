@@ -31,10 +31,16 @@ function deleteSkill(req,res,next) {
   res.redirect('/skills');
 }
 
+function updateSkill(req,res,next) {
+  importList.updateOne(req.params.id, req.body.value);
+  res.redirect('/skills');
+}
+
 module.exports = {
   index,
   show,
   create,
   addNew,
   delete: deleteSkill,
+  update: updateSkill,
 };

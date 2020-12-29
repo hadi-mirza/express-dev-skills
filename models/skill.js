@@ -13,14 +13,18 @@ function getEach() {
 }
 
 function deleteOne(id) {
-  // Find the index based on the id of the object
-
 const idx = skills.findIndex(skills => skills.id == id);
 skills.splice(idx, 1)
 }
+
+function updateOne(id,value) {
+  const idx = skills.find(skills => skills.id == id);
+  idx.name = value
+  }
 
 module.exports = {
   skills,
   getEach,
   deleteOne,
+  updateOne,
 };
