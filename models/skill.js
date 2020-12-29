@@ -6,12 +6,6 @@ let skills = [
   { name: "Express JS", id: "5" },
 ];
 
-function getEach() {
-  products.forEach(function (n) {
-      n.name;
-  });
-}
-
 function deleteOne(id) {
 const idx = skills.findIndex(skills => skills.id == id);
 skills.splice(idx, 1)
@@ -24,7 +18,6 @@ function updateOne(id,value) {
 
 module.exports = {
   skills,
-  getEach,
   deleteOne,
   updateOne,
 };
