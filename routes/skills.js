@@ -8,7 +8,7 @@ router.get('/new', skillCtrl.addNew)
 router.post('/', skillCtrl.create)
 
 // Not sure if this is the right mount
-router.post('/:id', skillCtrl.remove)
+router.delete('/:id', skillCtrl.delete)
 
 router.get('/:id', skillCtrl.show);
 

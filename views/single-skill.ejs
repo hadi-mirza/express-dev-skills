@@ -9,11 +9,11 @@
     <% skillNames.forEach(function(skill) { %>
         <% if (id == skill.id) { %>
             <h1> <%= skill.name %> is at this URL with the id of <%= skill.id %></h1>
+            <form action="/skills/<%= skill.id %>?_method=DELETE" method="post">
+                <button type="submit">Delete Skill</button>
+            </form>
         <% } %>
     <% }) %>
-    <form action="/skills" method="post">
-        <button type="submit">Delete Skill</button>
-    </form>
     <a href="/skills">Back to skills list</a>
 </body>
 </html>
