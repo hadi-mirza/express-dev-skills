@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Single Skill</title>
 </head>
 <body>
     <% skillNames.forEach(function(skill) { %>
@@ -11,7 +11,9 @@
             <h1> <%= skill.name %> is at this URL with the id of <%= skill.id %></h1>
         <% } %>
     <% }) %>
-
+    <form action="/skills" method="post">
+        <button type="submit">Delete Skill</button>
+    </form>
     <a href="/skills">Back to skills list</a>
 </body>
 </html>

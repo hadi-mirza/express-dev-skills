@@ -24,9 +24,16 @@ function create(req,res,next) {
   res.render("skills.ejs", { skillNames: importList.skills});
 }
 
+// remove item from list
+
+function remove(req,res,next) {
+  console.log('test2')
+}
+
 module.exports = {
   index,
   show,
   create,
   addNew,
+  remove,
 };
